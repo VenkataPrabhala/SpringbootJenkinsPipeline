@@ -18,10 +18,7 @@ try {
                 dir('scm') {
                     checkout scm
                     releaseVersion = getVersion()
-					echo "pwd: ${PWD}"
-					
-					sh("cd SpringbootDemo")
-					
+										
 					echo "pwd: ${PWD}"
 					sh("chmod -R 777 .") 
 					
