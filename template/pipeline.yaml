@@ -24,7 +24,7 @@ parameters:
   displayName: Git Repository URL
   name: SOURCE_REPOSITORY_URL
   required: true
-  value: https://git.tech.rz.db.de/VenkataPrabhala/OpenshiftLearning.git
+  value: https://github.com/VenkataPrabhala/SpringbootJenkinsPipeline.git
 - description: The Branch to build.
   displayName: Branch
   name: BRANCH
