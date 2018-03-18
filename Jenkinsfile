@@ -19,8 +19,8 @@ try {
                     checkout scm
                     releaseVersion = getVersion()
 					
-					 sh("./mvnw -B org.codehaus.mojo:versions-maven-plugin:2.2:set -U -DnewVersion=${releaseVersion}")
-                    sh('./mvnw -B package fabric8:build -Popenshift -Dfabric8.build.strategy=docker')
+					 sh("./../SpringbootDemo/mvnw -B org.codehaus.mojo:versions-maven-plugin:2.2:set -U -DnewVersion=${releaseVersion}")
+                    sh('./../SpringbootDemo/mvnw -B package fabric8:build -Popenshift -Dfabric8.build.strategy=docker')
                   
                 }
             }
