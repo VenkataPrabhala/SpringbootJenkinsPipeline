@@ -12,7 +12,7 @@ try {
         node('maven') {
 
             def releaseVersion = "1.0.${env.BUILD_NUMBER}"
-            def applicationName = "Springboot-SampleName"
+            def applicationName = "Springboot-samplename"
 
             stage('Build') {
                 dir('scm') {
