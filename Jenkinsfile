@@ -32,14 +32,14 @@ try {
 
             //stage('Integration Test - deploy components') {
               //  dir('scm') {
-                //    sh("oc process -f src/main/openshift/minio-deployment-template.yaml | oc apply -f -")
-                 //   sh("oc process -f src/main/openshift/persistant-volume-template.yaml | oc apply -f -")
+                //    sh("oc process -f template/minio-deployment-template.yaml | oc apply -f -")
+                 //   sh("oc process -f template/persistant-volume-template.yaml | oc apply -f -")
                // }
            // }
 
             stage('Integration Test - deploy application') {
                 dir('scm') {
-                    sh("oc process -f src/main/openshift/application-template.yaml -p APPLICATION_NAME=${applicationName}-stage -p IMAGE_VERSION=${releaseVersion}| oc apply -f -")
+                    sh("oc process -f template/openshift/application-template.yaml -p APPLICATION_NAME=${applicationName}-stage -p IMAGE_VERSION=${releaseVersion}| oc apply -f -")
                     openshiftDeploy(depCfg: "${applicationName}-stage")
                 }
             }
