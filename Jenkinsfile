@@ -38,10 +38,10 @@ try {
            // }
 
             stage('Integration Test - deploy application') {
-                dir('scm') {
-                    sh("oc process -f template/application-template.yaml -p APPLICATION_NAME=${applicationName}-stage -p IMAGE_VERSION=${releaseVersion}| oc apply -f -")
-                    openshiftDeploy(depCfg: "${applicationName}-stage")
-                }
+           //     dir('scm') {
+           //         sh("oc process -f template/application-template.yaml -p //APPLICATION_NAME=${applicationName}-stage -p IMAGE_VERSION=${releaseVersion}| oc apply -f -")
+           //         openshiftDeploy(depCfg: "${applicationName}-stage")
+          //      }
             }
 
 
